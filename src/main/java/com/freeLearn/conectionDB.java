@@ -28,21 +28,7 @@ import org.json.simple.JSONObject;
 public class conectionDB implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
-	
-//	static final String bd = "DBSRALYC";
-//    static final String login = "procesos_internos";
-//    static final String password = "r3d4lycP";
-//    static final String url = "jdbc:oracle:thin:@148.215.1.155:1521:DBSRALYC";
-	
-	////conexion a la 2.13
-//	static final String bd = "dbsralyc2";
-//    static final String login = "uredalycportal";
-//    static final String password = "Pr3d4lyc13x";
-//    static final String url = "jdbc:oracle:thin:@148.215.2.13:1521:dbsralyc2";
-   
-    
-    
+	    
     ///local
     static final String bd = "xe";
     static final String login = "system";
