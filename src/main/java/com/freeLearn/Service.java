@@ -102,6 +102,26 @@ public class Service {
                .header("Access-Control-Allow-Origin", "*")
                .build();
     }
+    @Path("getUserADEAByLogin/{login}")
+    @GET
+    @Produces("text/plain; charset=UTF-8")
+    public Response getUserADEAByLogin(@PathParam("login") String login){
+            String response="";
+            String url="";		   
+
+            try {
+                    response = API.getUserADEAByLogin(login);
+                    System.out.println("Se consulto service de ADEA solo por login:::"+ response);
+            }catch(Exception ex){
+                    System.out.println("error pagina:::"+ url);
+                    ex.printStackTrace();
+            }
+
+            return Response.ok()
+               .entity(response)
+               .header("Access-Control-Allow-Origin", "*")
+               .build();
+    }
     @Path("getOneUserADEA/{login}/{secret}")
     @GET
     @Produces("text/plain; charset=UTF-8")

@@ -73,6 +73,21 @@ public class controller {
 		}
 		return response;
 	}
+        public String getUserADEAByLogin(String login){
+		String response="";
+		try {
+			connDB=new conectionDB();
+			response=connDB.getOneUserADEA("select * from usuariosadea where LOGIN='"+login+"'");
+                        System.out.println("se ejecuto query en controller:::");
+                } 
+                    catch (NullPointerException e){
+                            System.out.println("fallo por caracteres:::");
+                            e.printStackTrace();
+                }catch(Exception e){
+			e.printStackTrace();
+		}
+		return response;
+	}
         public String searchUsersADEA(String words){
 		String response="";
 		try {
