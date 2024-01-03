@@ -12,6 +12,8 @@ import jakarta.ws.rs.core.MediaType;
 
 import com.freeLearn.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import jakarta.ws.rs.DELETE;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.Response;
 
@@ -143,7 +145,7 @@ public class Service {
                .build();
     }
     @Path("setOneUserADEA/{login}/{secret}/{nombre}/{apaterno}/{amaterno}/{cliente}/{estado}/{dateRegs}")
-    @GET
+    @POST
     @Produces("text/plain; charset=UTF-8")
     public Response setOneUserADEA(@PathParam("login") String login,@PathParam("secret") String secret,
             @PathParam("nombre") String nombre ,@PathParam("apaterno") String apaterno,@PathParam("amaterno") String amaterno,
@@ -166,7 +168,7 @@ public class Service {
                .build();
     }
     @Path("alterUserADEA/{login}/{nombre}/{cliente}/{apaterno}/{amaterno}/{estado}/{dateRegs}")
-    @GET
+    @POST
     @Produces("text/plain; charset=UTF-8")
     public Response alterUserADEA(@PathParam("login") String login,
             @PathParam("nombre") String nombre, @PathParam("cliente") String cliente,@PathParam("apaterno") String apaterno,@PathParam("amaterno") String amaterno,
@@ -191,7 +193,7 @@ public class Service {
     }
     
     @Path("deleteUserADEA/{login}/{secret}")
-    @GET
+    @POST
     @Produces("text/plain; charset=UTF-8")
     public Response deleteUserADEA(@PathParam("login") String login,@PathParam("secret") String secret){
             String response="";
